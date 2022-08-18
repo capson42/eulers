@@ -1,4 +1,4 @@
-num= 600851475143
+num=600851475143
 count=[]
 def mul(count):
     mul=1
@@ -6,7 +6,10 @@ def mul(count):
         mul=mul*i
     return mul
 
-for i in range(2,111):
-    if(num%i==0 and mul(count)!=num):
+for i in range(2,600851475143):
+    if(num%i==0):
         count.append(i)
-        print(i)
+        if mul(count)==num:
+            break
+
+print(max(count))
